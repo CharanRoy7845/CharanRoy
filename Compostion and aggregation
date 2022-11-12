@@ -1,0 +1,131 @@
+package co.charan;
+public class Person {
+String name;
+char gender;
+int age;
+
+}
+public class Employee extends Person {
+	SalaryAccount sa=new SalaryAccount(111,222,333);
+	Role r=new Role("subbu","kanna");
+	Laptop l;
+int cid;
+String company_name;
+}
+public class ContractEmployee extends Employee {
+String startdate;
+String enddate;
+float hourlyrate;
+}
+public class Fulltimeemployee extends Employee {
+int leaves_pending;
+int yearly_hike;
+}
+public class Laptop {
+String brand;
+String processor;
+int memory;
+Bag b;
+public Laptop(String brand, String processor, int memory,Bag b) {
+	super();
+	this.brand = brand;
+	this.processor = processor;
+	this.memory = memory;
+}
+public String getBrand() {
+	return brand;
+}
+public String getProcessor() {
+	return processor;
+}
+public int getMemory() {
+	return memory;
+}
+
+}
+public class SalaryAccount {
+int account_no;
+int salary_no;
+int basic_salary;
+public SalaryAccount(int account_no, int salary_no, int basic_salary) {
+	super();
+	this.account_no = account_no;
+	this.salary_no = salary_no;
+	this.basic_salary = basic_salary;
+}
+public int getAccount_no() {
+	return account_no;
+}
+public int getSalary_no() {
+	return salary_no;
+}
+public int getBasic_salary() {
+	return basic_salary;
+}
+
+}
+public class Role {
+String designation;
+String manager;
+public Role(String designation, String manager) {
+	super();
+	this.designation = designation;
+	this.manager = manager;
+}
+public String getDesignation() {
+	return designation;
+}
+public String getManager() {
+	return manager;
+}
+
+}
+public class Bag {
+String brand;
+int price;
+public Bag(String brand, int price) {
+	super();
+	this.brand = brand;
+	this.price = price;
+}
+public String getBrand() {
+	return brand;
+}
+public int getPrice() {
+	return price;
+}
+
+}
+public class Main1 {
+	public static void main(String[] args) {
+		Employee e=new Employee();
+		ContractEmployee ce=new ContractEmployee();
+		Fulltimeemployee fe=new Fulltimeemployee();
+		Bag b=new Bag("wildcraft",900);
+		Laptop l=new Laptop("dell","raizen",8,b);
+	System.out.println	(ce.name ="kiran");
+		System.out.println(ce.gender='M');
+		System.out.println(ce.age=20);
+		System.out.println(ce.cid=100);
+		System.out.println(ce.company_name="gqt");
+		System.out.println(ce.startdate="10_12-2000");
+		System.out.println(ce.enddate="11-12-2010");
+		System.out.println(ce.hourlyrate=20.5f);
+		System.out.println(fe.leaves_pending=10);
+		System.out.println(fe.yearly_hike=10);
+		
+		System.out.println(l.getBrand());
+		System.out.println(l.processor);
+		System.out.println(l.memory);
+		System.out.println(b.brand);
+		System.out.println(b.price);
+		System.out.println(e.sa.account_no);
+		System.out.println(e.sa.basic_salary);
+		System.out.println(e.sa.salary_no);
+		System.out.println(e.r.designation);
+		System.out.println(e.r.manager);
+		
+	}
+
+}
+
