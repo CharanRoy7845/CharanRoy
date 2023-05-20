@@ -1,0 +1,23 @@
+public class Hackerrank5 {
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String");
+		String s1=scan.nextLine();
+		String s3="";
+		s1=s1.replace("?", "");
+		s1=s1.replace("'", " ");
+		s1=s1.replace(",", "");
+		s1=s1.replace("!", "");
+		String []s2=s1.split(" ");
+		int count=0;
+		for(int j=1;j<=s2.length;j++)
+		{
+			count++;
+		}
+		System.out.println(count);
+		for(String ele:s2)
+		{	
+			System.out.println(ele);
+		}
+	}
+}
